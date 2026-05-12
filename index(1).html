@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uai Odontologia | Transformando Sorrisos</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        /* --- VARIÁVEIS E RESET --- */
+        :root {
+            --primary-color: #0a1e3f; 
+            --accent-color: #34bde9;  
+            --accent-hover: #2aa0c7;
+            --text-light: #ffffff;
+            --text-dark: #1f2937;
+            --bg-light: #f9fafb;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- UTILITÁRIOS --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+        .text-primary { color: var(--accent-color); }
+
+        .btn {
+            display: inline-block; padding: 12px 32px; border-radius: 50px;
+            font-weight: 600; cursor: pointer; transition: var(--transition);
+            border: none; font-size: 1rem;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color); color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(52, 189, 233, 0.4);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover); transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 189, 233, 0.6);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: var(--primary-color); color: var(--text-light);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo-placeholder { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.5rem; color: var(--text-light); }
+        .logo-icon { width: 40px; height: 40px; background-color: var(--accent-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { font-weight: 500; font-size: 0.95rem; transition: var(--transition); position: relative; }
+        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent-color); transition: var(--transition); }
+        .nav-links a:hover::after { width: 100%; }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO --- */
+        .hero { background-color: var(--primary-color); min-height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; position: relative; z-index: 2; }
+        .hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; color: var(--text-light); }
+        .hero-text p { font-size: 1.1rem; color: #d1d5db; margin-bottom: 30px; max-width: 500px; }
+        .hero-visual { position: relative; display: flex; justify-content: center; }
+        .tooth-animation { width: 300px; height: auto; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3)); }
+        .tooth-shine { animation: shine 4s infinite linear; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        @keyframes shine { 0% { opacity: 0.3; } 50% { opacity: 0.8; } 100% { opacity: 0.3; } }
+
+        /* --- ABOUT --- */
+        .about { background-color: var(--bg-light); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-stats { display: flex; gap: 30px; margin-top: 30px; }
+        .stat-item h3 { font-size: 2.5rem; color: var(--primary-color); }
+        .stat-item p { font-size: 0.9rem; color: #6b7280; }
+        .about-image img { border-radius: 20px; box-shadow: var(--shadow); width: 100%; height: 400px; object-fit: cover; }
+
+        /* --- SERVICES --- */
+        .services { background-color: #fff; }
+        .section-header { margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .section-header h2 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px; }
+        .section-header .line { width: 80px; height: 4px; background-color: var(--accent-color); margin: 0 auto; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: #fff; padding: 40px 30px; border-radius: 15px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); border-bottom: 4px solid transparent; cursor: pointer; }
+        .service-card:hover { transform: translateY(-10px); border-bottom-color: var(--accent-color); }
+        .service-icon { font-size: 3rem; color: var(--accent-color); margin-bottom: 20px; }
+        .service-card h3 { margin-bottom: 15px; color: var(--primary-color); }
+
+        /* --- TEAM (SWIPER) --- */
+        .team { background-color: var(--bg-light); }
+        .swiper-team { padding: 0 20px 60px; } /* Padding para as setas não cortarem */
+        .team-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); height: 100%; display: flex; flex-direction: column; }
+        .team-img-container { width: 100%; height: 250px; overflow: hidden; }
+        .team-img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
+        .team-card:hover .team-img { transform: scale(1.05); }
+        .team-info { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; }
+        .team-info h4 { color: var(--primary-color); font-size: 1.1rem; margin-bottom: 5px; }
+        .team-cro { color: var(--accent-color); font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 10px; }
+        .team-desc { font-size: 0.8rem; color: #666; margin-top: auto; } /* Push to bottom */
+
+        /* --- REVIEWS (TRUSTINDEX STYLE) --- */
+        .reviews-section { background-color: #f6f6f6; padding: 80px 0; } /* Fundo cinza claro do Trustindex original */
+        .trustindex-header { text-align: center; margin-bottom: 40px; }
+        .trustindex-logo { color: #fbbf24; font-size: 2rem; margin-bottom: 10px; } /* Estrelas do header */
+        .trust-title { font-size: 1.5rem; font-weight: 600; color: #333; }
+        
+        .swiper-reviews { padding-bottom: 50px; }
+        .ti-review-item { background: #fff; border-radius: 8px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin: 10px; height: auto; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        .ti-review-header { display: flex; align-items: center; margin-bottom: 15px; }
+        .ti-profile-img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 15px; }
+        .ti-profile-details h4 { font-size: 1rem; color: #333; margin: 0; line-height: 1.2; }
+        .ti-stars { color: #fbbf24; font-size: 0.9rem; margin-top: 4px; }
+        .ti-star { color: #fbbf24; margin-right: 2px; }
+        .ti-star.empty { color: #d1d5db; }
+        
+        .ti-review-text { font-size: 0.9rem; color: #555; font-style: italic; line-height: 1.5; }
+        
+        /* Swiper Navigation Styles */
+        .swiper-button-next, .swiper-button-prev { color: var(--accent-color); }
+        .swiper-button-next:after, .swiper-button-prev:after { font-size: 24px; }
+        .swiper-pagination-bullet { background: #ccc; opacity: 1; }
+        .swiper-pagination-bullet-active { background: var(--accent-color); }
+
+        /* --- LOCATIONS --- */
+        .locations { background-color: var(--primary-color); color: var(--text-light); }
+        .locations .section-header h2 { color: var(--text-light); }
+        .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+        .location-card { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center; transition: var(--transition); }
+        .location-card:hover { background: rgba(255, 255, 255, 0.1); }
+        .location-card h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-color); }
+        .location-info { margin-bottom: 30px; font-size: 0.95rem; color: #d1d5db; }
+        .location-info i { margin-right: 10px; color: var(--accent-color); }
+
+        /* --- FOOTER --- */
+        footer { background-color: #051126; color: #9ca3af; padding: 60px 0 20px; border-top: 5px solid var(--accent-color); }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-logo { color: var(--text-light); font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+        .footer-col h4 { color: var(--text-light); margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-links li { margin-bottom: 10px; }
+        .social-icons { display: flex; gap: 15px; margin-top: 20px; }
+        .social-icons a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .social-icons a:hover { background: var(--accent-color); color: var(--text-light); }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .navbar { height: 70px; }
+            .mobile-menu-btn { display: block; }
+            .nav-links { position: fixed; top: 70px; left: 0; width: 100%; background-color: var(--primary-color); flex-direction: column; padding: 40px 0; transform: translateY(-150%); transition: var(--transition); z-index: 999; }
+            .nav-links.active { transform: translateY(0); }
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .hero-text p { margin: 0 auto 30px; }
+            .tooth-animation { width: 200px; margin-top: 30px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image { order: -1; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .social-icons { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="container navbar">
+            <div class="logo-placeholder">
+                <div class="logo-icon"><i class="fa-solid fa-tooth"></i></div>
+                UAI ODONTO
+            </div>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#unidades">Unidades</a></li>
+                    <li><a href="#unidades" class="btn btn-accent">Agendar</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Transformamos sorrisos <br> <span class="text-primary">e vidas</span></h1>
+                <p>Na Uai Odontologia, cuidamos de você com dedicação, tecnologia e humanização. Especialistas em Implantodontia e Prótese há mais de 16 anos em Barueri.</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <a href="#unidades" class="btn btn-accent">Agendar Agora</a>
+                    <a href="#servicos" class="btn btn-outline" style="border: 2px solid var(--accent-color); color: var(--accent-color);">Conheça os Serviços</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <svg class="tooth-animation" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 10 C50 10 10 50 10 100 C10 130 30 160 50 190 C60 210 70 230 80 230 C90 230 95 200 100 190 C105 200 110 230 120 230 C130 230 140 210 150 190 C170 160 190 130 190 100 C190 50 150 10 100 10 Z" fill="#ffffff" stroke="#34bde9" stroke-width="3"/>
+                    <circle cx="70" cy="100" r="8" fill="#0a1e3f"/>
+                    <circle cx="130" cy="100" r="8" fill="#0a1e3f"/>
+                    <circle cx="72" cy="98" r="3" fill="#ffffff"/>
+                    <circle cx="132" cy="98" r="3" fill="#ffffff"/>
+                    <path d="M70 120 Q100 150 130 120" fill="none" stroke="#0a1e3f" stroke-width="4" stroke-linecap="round"/>
+                    <path class="tooth-shine" d="M140 40 Q160 40 160 60" fill="none" stroke="#34bde9" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE SECTION -->
+    <section class="section-padding about" id="sobre">
+        <div class="container about-grid">
+            <div class="about-image">
+                <!-- Foto da equipe conforme solicitado -->
+                <img src="http://uaiodontologia.com.br/wp-content/uploads/2026/05/foto-time-dentistas-2048x1365.jpg" alt="Equipe Uai Odontologia">
+            </div>
+            <div class="about-content">
+                <h4 class="text-primary">SOBRE NÓS</h4>
+                <h2 style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px;">Excelência em saúde bucal em Barueri</h2>
+                <p style="margin-bottom: 20px; color: #555;">Desde 2009, nossa missão é proporcionar autoestima e saúde através de sorrisos bonitos. Contamos com 3 unidades estrategicamente localizadas para facilitar o seu acesso.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>16+</h3>
+                        <p>Anos de História</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100k+</h3>
+                        <p>Pacientes Atendidos</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3</h3>
+                        <p>Unidades Próprias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS SECTION -->
+    <section class="section-padding services" id="servicos">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nossos Tratamentos</h2>
+                <div class="line"></div>
+                <p style="margin-top: 15px; color: #666;">Tecnologia de ponta para garantir conforto e resultados duradouros.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Implantes</h3>
+                    <p>Especialidade que substitui dentes perdidos com pinos de titânio e próteses dentárias de alta qualidade.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-teeth-open"></i></div>
+                    <h3>Ortodontia</h3>
+                    <p>Correção do alinhamento dos dentes e da mordida com aparelhos estéticos e alinhadores invisíveis.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Harmonização</h3>
+                    <p>Procedimentos estéticos faciais para valorizar seu sorriso e rejuvenescer sua aparência.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Próteses</h3>
+                    <p>Restauração completa da função estética com próteses fixas, removíveis e sobre implantes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                    <h3>Endodontia</h3>
+                    <p>Tratamento de canal realizado com tecnologia microscópica para maior precisão.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                    <h3>Odontopediatria</h3>
+                    <p>Cuidado especial e humanizado para a saúde bucal das crianças desde os primeiros anos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPE SECTION (SWIPER) -->
+    <section class="section-padding team" id="equipe">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nossa Equipe</h2>
+                <div class="line"></div>
+                <p style="margin-top: 15px; color: #666;">Deslize para conhecer nossos especialistas.</p>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiperTeam swiper-team">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Doctor 1 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/Foto-Dra-Giovanna-qyeiu1aukup19q33oxe51y2wzt8l8ruct4ptycj5sk.jpeg" alt="Dra. Giovana" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra. Giovana Tomé</h4>
+                                <span class="team-cro">CRO-SP 129981</span>
+                                <p class="team-desc">Especialista em Implantodontia pela ABO-SP. Residência em Reabilitação Oral.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/IMG-20240910-WA0013.jpg-e1777914501522-rmyznqco27hsmdebrb5q9s51b7t6812uxd4dm710k4.jpeg" alt="Dr. Rafael" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dr. Rafael Silva</h4>
+                                <span class="team-cro">CRO-SP 119828</h4>
+                                <p class="team-desc">Especialista em Ortodontia e Ortopedia. Residente Bucomaxilofacial.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/foto-renato-scaled-rmvzohuqik5swltphj3x77mxr1i2q60s5byqc0o6qc.jpg" alt="Dr. Renato" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dr. Renato Munhoz</h4>
+                                <span class="team-cro">CRO-SP 96948</h4>
+                                <p class="team-desc">Especialista em Ortodontia, DTM e Dor Orofacial.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 4 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/169af407-5e96-404c-b229-696152e32992-e1777917093683-rmz1jeqc4s50jn3ckkapspbt1y8kfhr48c2xjeokk4.jpg" alt="Dra. Letícia" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra. Letícia</h4>
+                                <span class="team-cro">CRO-SP 122077</h4>
+                                <p class="team-desc">Especialista em Odontopediatria e laserterapia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 5 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/Foto-Dra-Ana--qyeiu601j0vgvrw9xhf9wew7yqlfb9d0hrz9cqc6xg.jpeg" alt="Dra. Ana" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra. Ana</h4>
+                                <span class="team-cro">CRO-SP 159985</h4>
+                                <p class="team-desc">Atendimento adulto e pediátrico. Formada UNIP.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 6 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/Foto-Dra-Isadora--e1777917202412-rmz1m96qtq19p4yiyal1uhh1sy7kqi1uyf6uukgnpw.jpeg" alt="Dra. Isadora" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra. Isadora Espínola</h4>
+                                <span class="team-cro">CRO-SP 123759</h4>
+                                <p class="team-desc">Especialista em Endodontia pela FAOA - APCD/SP.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 7 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/FotoUAI.jpg-scaled-e1777918339819-rmz2fxx8ocoadru4lmjv3hs581vwucwo1cxxi6g178.jpeg" alt="Dr. Hugo" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dr. Hugo Antonizzi</h4>
+                                <span class="team-cro">CRO-SP 123759</h4>
+                                <p class="team-desc">Especialista em Implantodontia e Cirurgia Oral Menor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Doctor 8 -->
+                     <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/Foto-Dra-Danielle--scaled-e1777924251719-rmz6qaz30vzh0fm78cm8kjh9611wwxprxdsiq1kjdg.jpg" alt="Dra. Danielle" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra. Danielle</h4>
+                                <span class="team-cro">CRO-SP 133872</h4>
+                                <p class="team-desc">Especialista em Ortodontia pelo SENAC. Laserterapia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 9 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-05-08-at-10.37.41-rn9hh2r1iqpjg0opgkdg7j2l6kijcph29rolf46gb8.jpeg" alt="Dra Isabella" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra Isabella Petroline</h4>
+                                <span class="team-cro">CRO-SP 176745</h4>
+                                <p class="team-desc">Formada USP. Residência em Harmonização Orofacial.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 10 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-05-04-at-18.22.01-rmzaqemcrj8ywcaus508boe7nksnygsdem9ac5wrh0.jpeg" alt="Dra Natalia" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra Natalia Lustosa</h4>
+                                <span class="team-cro">CRO-SP 172466</h4>
+                                <p class="team-desc">Formada UNESP. Atendimento adulto e pediátrico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 11 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/IMG_1255-e1777929334820-rmzaf0spzrnyacu597uw4jt8nkwmqflei9tl3isetw.jpg" alt="Dra Carolain" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra Carolain Godoy</h4>
+                                <span class="team-cro">CRO-SP 169831</h4>
+                                <p class="team-desc">Técnica em Prótese Dentária. Formada Uninove.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 12 -->
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-img-container">
+                                <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-05-04-at-13.48.45-rmza0vc73kajhpe5w3n3l4deoqnouhevw88ezjrsic.jpeg" alt="Dra Giullya" class="team-img">
+                            </div>
+                            <div class="team-info">
+                                <h4>Dra Giullya Campos</h4>
+                                <span class="team-cro">CRO-SP 151658</h4>
+                                <p class="team-desc">Especialista em Ortodontia pela Universidade Italo Brasileiro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS SECTION (SWIPER TRUSTINDEX) -->
+    <section class="reviews-section" id="depoimentos">
+        <div class="container">
+            <div class="trustindex-header">
+                <div class="trustindex-logo">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h3 class="trust-title">119 avaliações no Google</h3>
+                <p style="font-size: 0.9rem; color: #666;">Veja o que nossos pacientes dizem</p>
+            </div>
+
+            <div class="swiper mySwiperReviews swiper-reviews">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Review 1 -->
+                    <div class="swiper-slide">
+                        <div class="ti-review-item">
+                            <div class="ti-review-header">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocKkKRLGP8WFFx7gwWdQUEulEvsmhJnbuEe6vqeiByQiiOZQLQ=s64-c-rp-mo-br100" alt="Tais Raquel" class="ti-profile-img">
+                                <div class="ti-profile-details">
+                                    <h4>Tais Raquel</h4>
+                                    <div class="ti-stars">
+                                        <i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ti-review-text">"Fui bem atendida e super rápida, ela atender muito bem , diferente das outras que já passei, ela é muito eficaz. Atendimento da Tainá está de parabéns."</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="swiper-slide">
+                        <div class="ti-review-item">
+                            <div class="ti-review-header">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjVYC6tdgYJfabDTXGeCJeS9eNSzNxhb_-6_akf6HR9kfSOmvqUaLw=s64-c-rp-mo-ba12-br100" alt="Rosana Santos" class="ti-profile-img">
+                                <div class="ti-profile-details">
+                                    <h4>Rosana Santos</h4>
+                                    <div class="ti-stars">
+                                        <i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ti-review-text">"Sou muito bem atendida. Amoooo"</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="swiper-slide">
+                        <div class="ti-review-item">
+                            <div class="ti-review-header">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjUyG_pcj6_JTDKoIKtzMhk5f2HfHBfUp2EynXbYI6hGc55LcoArSw=s64-c-rp-mo-br100" alt="Carla Alves Ansaloni" class="ti-profile-img">
+                                <div class="ti-profile-details">
+                                    <h4>Carla Alves Ansaloni</h4>
+                                    <div class="ti-stars">
+                                        <i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ti-review-text">"Levei meu filho de 5 anos para consulta com a Dra. Letícia e fiquei extremamente satisfeita com toda a experiência... Recomendo com toda certeza!"</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="swiper-slide">
+                        <div class="ti-review-item">
+                            <div class="ti-review-header">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocIcmbil-cJfKlyv_PBsK_Q_ZrgMlQ_BhH_PX_y3eQ7_eCqEhg=s64-c-rp-mo-br100" alt="Ivaneide Afre" class="ti-profile-img">
+                                <div class="ti-profile-details">
+                                    <h4>Ivaneide Afre</h4>
+                                    <div class="ti-stars">
+                                        <i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ti-review-text">"Ótimo atendimento da Dra Natália e Dra Isadora, bom atendimento do Felipe e da Tainá"</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="swiper-slide">
+                        <div class="ti-review-item">
+                            <div class="ti-review-header">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocIcmbil-cJfKlyv_PBsK_Q_ZrgMlQ_BhH_PX_y3eQ7_eCqEhg=s64-c-rp-mo-br100" alt="Gabi Medeiros" class="ti-profile-img">
+                                <div class="ti-profile-details">
+                                    <h4>Gabi Medeiros</h4>
+                                    <div class="ti-stars">
+                                        <i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ti-review-text">"Ótima clínica, fui muito bem recepcionada, ótimos atendimento, fiquei encantada com o atendimento do Felipe e da Taina🫶🏽"</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="swiper-slide">
+                        <div class="ti-review-item">
+                            <div class="ti-review-header">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocKVPDqcnz-byajuoLfoUhs5E7vLRxlKgAYkpM4JIB3WquU1gXA=s64-c-rp-mo-br100" alt="Kenia Ferreira" class="ti-profile-img">
+                                <div class="ti-profile-details">
+                                    <h4>Kenia Ferreira</h4>
+                                    <div class="ti-stars">
+                                        <i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star"></i><i class="fas fa-star ti-star empty"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ti-review-text">"Quero avaliar o Felipe e a Tainá na recepção. São educados, atenciosos e muito profissionais. Fui muito bem atendida."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIDADES E CONTATO -->
+    <section class="section-padding locations" id="unidades">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nossas Unidades</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="locations-grid">
+                <!-- Unidade 1 -->
+                <div class="location-card">
+                    <h3>Unidade Henriqueta</h3>
+                    <div class="location-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Henriqueta M. Guerra, 106</p>
+                        <p><i class="fab fa-whatsapp"></i> (11) 95630-4120</p>
+                    </div>
+                    <a href="https://wa.me/5511956304120" target="_blank" class="btn btn-accent">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Unidade 2 -->
+                <div class="location-card">
+                    <h3>Unidade Campos Sales</h3>
+                    <div class="location-info">
+                        <p><i class="fas fa-map-marker-alt"></i> R. Campos Sales, 42</p>
+                        <p><i class="fab fa-whatsapp"></i> (11) 94274-2684</p>
+                    </div>
+                    <a href="https://wa.me/5511942742684" target="_blank" class="btn btn-accent">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Unidade 3 -->
+                <div class="location-card">
+                    <h3>Unidade 26 de Março</h3>
+                    <div class="location-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Rua 26 de Março, Centro</p>
+                        <p><i class="fab fa-whatsapp"></i> (11) 99999-9999</p>
+                    </div>
+                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-accent">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon" style="background: #fff; color: var(--accent-color);"><i class="fa-solid fa-tooth"></i></div>
+                        UAI ODONTO
+                    </div>
+                    <p>Transformando sorrisos e vidas com dedicação e carinho há mais de 16 anos em Barueri.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Tratamentos</a></li>
+                        <li><a href="#equipe">Corpo Clínico</a></li>
+                        <li><a href="#unidades">Agendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="margin-bottom: 15px;">Receba dicas de saúde bucal.</p>
+                    <form onsubmit="event.preventDefault(); alert('Obrigado por se inscrever!');" style="display: flex; gap: 10px;">
+                        <input type="email" placeholder="Seu e-mail" required style="padding: 10px; border-radius: 5px; border: none; flex: 1;">
+                        <button type="submit" class="btn btn-accent" style="padding: 10px 20px;">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Uai Odontologia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Swiper Initialization - TEAM
+        const swiperTeam = new Swiper(".mySwiperTeam", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: { slidesPerView: 1, spaceBetween: 10 },
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+                1200: { slidesPerView: 4, spaceBetween: 30 },
+            },
+        });
+
+        // Swiper Initialization - REVIEWS (Trustindex Style)
+        const swiperReviews = new Swiper(".mySwiperReviews", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                320: { slidesPerView: 1, spaceBetween: 10 },
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 20 },
+            },
+        });
+
+        // Header Shadow Effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.2)";
+                header.style.backgroundColor = "rgba(10, 30, 63, 0.95)";
+            } else {
+                header.style.boxShadow = "none";
+                header.style.backgroundColor = "#0a1e3f";
+            }
+        });
+    </script>
+</body>
+</html>
