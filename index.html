@@ -843,48 +843,116 @@
     </div>
   </section>
 
-  <!-- Contato Section -->
-  <section id="contato" class="py-20 md:py-28 bg-brand-800 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <span class="reveal text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3 block">Venha Nos Visitar</span>
-        <h2 class="reveal reveal-delay-1 text-3xl md:text-5xl font-bold text-white tracking-tight">Encontre a Unidade Mais Próxima</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
-              <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
-            </div>
-            <div>
-              <h3 class="text-white font-semibold text-lg">Unidade Campos Sales</h3>
-              <p class="text-white/50 text-sm">R. Campos Sales, 123 - São Paulo, SP</p>
-            </div>
-          </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5841489173217!2d-46.87964570321044!3d-23.5114835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da1fa0ad07%3A0xc0acd177d4a3f310!2sOdontoclin!5e0!3m2!1spt-PT!2sbr!4v1773081355175!5m2!1spt-PT!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="reveal reveal-delay-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
-              <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
-            </div>
-            <div>
-              <h3 class="text-white font-semibold text-lg">Unidade Henriqueta Mendes Guerra</h3>
-              <p class="text-white/50 text-sm">R. Henriqueta Mendes Guerra, 456 - São Paulo, SP</p>
-            </div>
-          </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5968025351726!2d-46.876051!3d-23.511028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da34fcd56b%3A0xabc71879ee47e8!2sUAI%20Henriqueta!5e0!3m2!1spt-PT!2sbr!4v1773080064843!5m2!1spt-PT!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-      <div class="reveal text-center mt-12">
-        <a href="https://wa.me/5511950602146?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços." target="_blank" class="inline-flex items-center gap-2 bg-accent hover:bg-brand-400 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 text-sm tracking-wide">
-          <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span> Agendar pelo WhatsApp
-        </a>
-      </div>
+  <!-- Contato Section - MODIFIED -->
+<section id="contato" class="py-20 md:py-28 bg-brand-800 relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="reveal text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3 block">Venha Nos Visitar</span>
+      <h2 class="reveal reveal-delay-1 text-3xl md:text-5xl font-bold text-white tracking-tight">Encontre a Unidade Mais Próxima</h2>
     </div>
-  </section>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      
+      <!-- Unidade Campos Sales - COM WIDGET INTEGRADO -->
+      <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-500">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-lg">Unidade Campos Sales</h3>
+            <p class="text-white/50 text-sm">R. Campos Sales, 42 - São Paulo, SP</p>
+          </div>
+        </div>
+        
+        <!-- Widget de Informações -->
+        <div class="location-info bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="iconify text-accent" data-icon="mdi:phone" data-width="20"></span>
+            <p class="text-white/80 text-sm">(11) 94274-2684</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="iconify text-accent" data-icon="mdi:clock-outline" data-width="20"></span>
+            <p class="text-white/80 text-sm">Seg-Sex: 8h-19h | Sáb: 8h-13h</p>
+          </div>
+        </div>
+        
+        <a href="https://wa.me/5511942742684?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20agendar%20na%20unidade%20Campos%20Sales." 
+           target="_blank" 
+           class="btn btn-accent w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 text-sm">
+          <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
+          Chamar no WhatsApp
+        </a>
+        
+        <div class="mt-4 rounded-xl overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5841489173217!2d-46.87964570321044!3d-23.5114835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da1fa0ad07%3A0xc0acd177d4a3f310!2sOdontoclin!5e0!3m2!1spt-PT!2sbr!4v1773081355175!5m2!1spt-PT!2sbr" 
+                  width="100%" 
+                  height="200" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Unidade Henriqueta Mendes Guerra - COM WIDGET INTEGRADO -->
+      <div class="reveal reveal-delay-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-500">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-lg">Unidade Henriqueta</h3>
+            <p class="text-white/50 text-sm">Av. Henriqueta M. Guerra, 106 - São Paulo, SP</p>
+          </div>
+        </div>
+        
+        <!-- Widget de Informações -->
+        <div class="location-info bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="iconify text-accent" data-icon="mdi:phone" data-width="20"></span>
+            <p class="text-white/80 text-sm">(11) 95630-4120</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="iconify text-accent" data-icon="mdi:clock-outline" data-width="20"></span>
+            <p class="text-white/80 text-sm">Seg-Sex: 8h-19h | Sáb: 8h-13h</p>
+          </div>
+        </div>
+        
+        <a href="https://wa.me/5511956304120?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20agendar%20na%20unidade%20Henriqueta." 
+           target="_blank" 
+           class="btn btn-accent w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 text-sm">
+          <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
+          Chamar no WhatsApp
+        </a>
+        
+        <div class="mt-4 rounded-xl overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5968025351726!2d-46.876051!3d-23.511028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da34fcd56b%3A0xabc71879ee47e8!2sUAI%20Henriqueta!5e0!3m2!1spt-PT!2sbr!4v1773080064843!5m2!1spt-PT!2sbr" 
+                  width="100%" 
+                  height="200" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Botão Centralizado de Agendamento -->
+    <div class="reveal text-center mt-12">
+      <a href="https://wa.me/5511950602146?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços." 
+         target="_blank" 
+         class="inline-flex items-center gap-2 bg-accent hover:bg-brand-400 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 text-sm tracking-wide">
+        <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="bg-brand-900 pt-16 pb-8">
