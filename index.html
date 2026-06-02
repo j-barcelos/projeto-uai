@@ -103,28 +103,40 @@
   }
 
   .ti-review-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  .ti-profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 15px;
-  }
-  .ti-profile-details h4 {
-    font-size: 1rem;
-    color: #333;
-    margin: 0;
-    line-height: 1.2;
-  }
-  .ti-stars {
-    color: #fbbf24;
-    font-size: 0.9rem;
-    margin-top: 4px;
-  }
+  display: flex;
+  align-items: center; /* Mantém tudo alinhado no centro verticalmente */
+  justify-content: flex-start; /* Alinha à esquerda */
+  margin-bottom: 12px; /* Reduzimos um pouco a margem inferior */
+  gap: 12px; /* Espaço entre a foto, nome e estrelas */
+}
+
+.ti-profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0; /* Remove a margem antiga */
+}
+
+.ti-profile-details {
+  display: flex;
+  flex-direction: column; /* Nome e estrelas empilhados verticalmente APENAS dentro da div de detalhes */
+  justify-content: center;
+  gap: 2px; /* Espaço pequeno entre nome e estrelas */
+}
+
+.ti-profile-details h4 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ti-stars {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  margin-top: 0; /* Remove a margem superior antiga */
+}
   .ti-review-text {
     font-size: 0.9rem;
     color: #555;
