@@ -1015,107 +1015,109 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Mobile Menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-    });
+  // Mobile Menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
 
-    // Header Scroll
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
-        header.style.background = 'rgba(9,29,62,0.92)';
-        header.style.backdropFilter = 'blur(16px)';
-        header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.2)';
-      } else {
-        header.style.background = 'rgba(255,255,255,0)';
-        header.style.backdropFilter = 'none';
-        header.style.boxShadow = 'none';
+  // Header Scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header.style.background = 'rgba(9,29,62,0.92)';
+      header.style.backdropFilter = 'blur(16px)';
+      header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.2)';
+    } else {
+      header.style.background = 'rgba(255,255,255,0)';
+      header.style.backdropFilter = 'none';
+      header.style.boxShadow = 'none';
+    }
+  });
+
+  // Reveal on Scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
 
-    // Reveal on Scroll
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(el => observer.observe(el));
+  // Swiper: Equipe - MODIFICADO
+  new Swiper('.team-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: '.team-swiper .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.team-swiper .swiper-button-next',
+      prevEl: '.team-swiper .swiper-button-prev',
+    },
+    breakpoints: {
+      320:  { slidesPerView: 1, spaceBetween: 10 },
+      640:  { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 3, spaceBetween: 30 },
+      1200: { slidesPerView: 4, spaceBetween: 30 },
+    },
+  });
 
-    // Swiper: Equipe
-    new Swiper('.team-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 24,
-      speed: 600,
-      loop: true,
-      autoplay: {
-        delay: 4500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      pagination: {
-        el: '.team-swiper .swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        prevEl: '.team-swiper .swiper-prev',
-        nextEl: '.team-swiper .swiper-next',
-      },
-      breakpoints: {
-        640:  { slidesPerView: 2, spaceBetween: 24 },
-        768:  { slidesPerView: 3, spaceBetween: 24 },
-        1024: { slidesPerView: 4, spaceBetween: 24 },
-      },
-    });
+  // Swiper: Depoimentos - MODIFICADO
+  new Swiper('.reviews-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: '.reviews-swiper .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.reviews-swiper .swiper-button-next',
+      prevEl: '.reviews-swiper .swiper-button-prev',
+    },
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      768: { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 3, spaceBetween: 20 },
+    },
+  });
 
-    // Swiper: Depoimentos
-    new Swiper('.reviews-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 24,
-      speed: 600,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      pagination: {
-        el: '.reviews-swiper .swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        prevEl: '.reviews-swiper .swiper-prev',
-        nextEl: '.reviews-swiper .swiper-next',
-      },
-      breakpoints: {
-        640:  { slidesPerView: 2, spaceBetween: 24 },
-        1024: { slidesPerView: 3, spaceBetween: 24 },
-      },
-    });
-
-    // Treatment information database
-    const treatmentInfo = {
-      implantes: {
-        title: 'Implantes Dentários',
-        content: `
-          <p>Os implantes dentários são a solução mais moderna e duradoura para substituir dentes perdidos. Consistem em um pino de titânio que é inserido cirurgicamente no osso da mandíbula ou maxila, funcionando como uma raiz artificial.</p>
-          <ul>
-            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Materiais de alta qualidade:</strong> Titânio biocompatível ou zircônia</li>
-            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Duração:</strong> Podem durar a vida toda com cuidados adequados</li>
-            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Recuperação:</strong> Processo de osseointegração de 3-6 meses</li>
-            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Benefícios:</strong> Funcionalidade natural, preservação óssea, estética superior</li>
-          </ul>
-          <p>Ideal para quem perdeu um ou mais dentes e deseja recuperar a função mastigatória e a estética do sorriso.</p>
-        `
-      },
-      ortodontia: {
+  // Treatment information database
+  const treatmentInfo = {
+    implantes: {
+      title: 'Implantes Dentários',
+      content: `
+        <p>Os implantes dentários são a solução mais moderna e duradoura para substituir dentes perdidos. Consistem em um pino de titânio que é inserido cirurgicamente no osso da mandíbula ou maxila, funcionando como uma raiz artificial.</p>
+        <ul>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Materiais de alta qualidade:</strong> Titânio biocompatível ou zircônia</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Duração:</strong> Podem durar a vida toda com cuidados adequados</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Recuperação:</strong> Processo de osseointegração de 3-6 meses</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Benefícios:</strong> Funcionalidade natural, preservação óssea, estética superior</li>
+        </ul>
+        <p>Ideal para quem perdeu um ou mais dentes e deseja recuperar a função mastigatória e a estética do sorriso.</p>
+      `
+    },
+    ortodontia: {
       title: 'Ortodontia',
       content: `
         <p>A ortodontia corrige o alinhamento dos dentes e da mordida, melhorando não apenas a estética, mas também a saúde bucal e funcionalidade.</p>
