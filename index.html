@@ -227,156 +227,158 @@
       border-radius: 0.75rem;
       font-weight: 500;
       transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
     }
     .treatment-card-btn:hover {
       background: #2980b9;
       transform: translateX(4px);
     }
-    
+
     /* Modal Styles */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(9,29,62,0.85);
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  .modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .modal-content {
-    background: white;
-    border-radius: 1.5rem;
-    max-width: 600px;
-    width: 100%;
-    max-height: 80vh;
-    overflow-y: auto;
-    transform: scale(0.9) translateY(20px);
-    transition: all 0.3s cubic-bezier(0.25,1,0.5,1);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-  }
-  
-  .modal-overlay.active .modal-content {
-    transform: scale(1) translateY(0);
-  }
-  
-  .modal-header {
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .modal-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #091d3e;
-    margin: 0;
-  }
-  
-  .modal-close {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f0f8ff;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  
-  .modal-close:hover {
-    background: #34BDE9;
-  }
-  
-  .modal-close:hover .iconify {
-    color: white;
-  }
-  
-  .modal-body {
-    padding: 2rem;
-  }
-  
-  .modal-body p {
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-  
-  .modal-body ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-  }
-  
-  .modal-body li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-  }
-  
-  .modal-body li:last-child {
-    border-bottom: none;
-  }
-  
-  .modal-footer {
-    padding: 1.5rem 2rem;
-    border-top: 1px solid #eee;
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-  }
-  
-  .modal-btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.75rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .modal-btn-primary {
-    background: #34BDE9;
-    color: white;
-    border: none;
-  }
-  
-  .modal-btn-primary:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
-  }
-  
-  .modal-btn-secondary {
-    background: transparent;
-    color: #666;
-    border: 1px solid #ddd;
-  }
-  
-  .modal-btn-secondary:hover {
-    background: #f5f5f5;
-  }
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(9,29,62,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 1.5rem;
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      transform: scale(0.9) translateY(20px);
+      transition: all 0.3s cubic-bezier(0.25,1,0.5,1);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #091d3e;
+      margin: 0;
+    }
+
+    .modal-close {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f0f8ff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+      background: #34BDE9;
+    }
+
+    .modal-close:hover .iconify {
+      color: white;
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    .modal-body p {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .modal-body ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .modal-body li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .modal-body li:last-child {
+      border-bottom: none;
+    }
+
+    .modal-footer {
+      padding: 1.5rem 2rem;
+      border-top: 1px solid #eee;
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+    }
+
+    .modal-btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .modal-btn-primary {
+      background: #34BDE9;
+      color: white;
+      border: none;
+    }
+
+    .modal-btn-primary:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    .modal-btn-secondary {
+      background: transparent;
+      color: #666;
+      border: 1px solid #ddd;
+    }
+
+    .modal-btn-secondary:hover {
+      background: #f5f5f5;
+    }
   </style>
 </head>
 
@@ -485,69 +487,69 @@
       </div>
       <div class="treatments-grid">
         <!-- Implantes -->
-        <div class="treatment-card reveal">
+        <div class="treatment-card reveal" data-treatment="implantes">
           <div class="treatment-card-image">
             <img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?q=80&w=800&auto=format&fit=crop" alt="Implantes">
           </div>
           <div class="treatment-card-content">
             <h3>Implantes</h3>
             <p>Especialidade que substitui dentes perdidos com pinos de titânio e próteses dentárias de alta qualidade.</p>
-            <a href="#" class="treatment-card-btn">Saiba mais</a>
+            <button class="treatment-card-btn" onclick="openTreatmentModal('implantes')">Saiba mais</button>
           </div>
         </div>
         <!-- Ortodontia -->
-        <div class="treatment-card reveal reveal-delay-1">
+        <div class="treatment-card reveal reveal-delay-1" data-treatment="ortodontia">
           <div class="treatment-card-image">
             <img src="https://images.unsplash.com/photo-1684607632829-1e5bf4f21dab?q=80&w=800&auto=format&fit=crop" alt="Ortodontia">
           </div>
           <div class="treatment-card-content">
             <h3>Ortodontia</h3>
             <p>Correção do alinhamento dos dentes e da mordida com aparelhos estéticos e alinhadores invisíveis.</p>
-            <a href="#" class="treatment-card-btn">Saiba mais</a>
+            <button class="treatment-card-btn" onclick="openTreatmentModal('ortodontia')">Saiba mais</button>
           </div>
         </div>
         <!-- Harmonização -->
-        <div class="treatment-card reveal reveal-delay-2">
+        <div class="treatment-card reveal reveal-delay-2" data-treatment="harmonizacao">
           <div class="treatment-card-image">
             <img src="https://plus.unsplash.com/premium_photo-1661255395799-a300794397fb?q=80&w=800&auto=format&fit=crop" alt="Harmonização">
           </div>
           <div class="treatment-card-content">
             <h3>Harmonização</h3>
             <p>Procedimentos estéticos faciais para valorizar seu sorriso e rejuvenescer sua aparência.</p>
-            <a href="#" class="treatment-card-btn">Saiba mais</a>
+            <button class="treatment-card-btn" onclick="openTreatmentModal('harmonizacao')">Saiba mais</button>
           </div>
         </div>
         <!-- Próteses -->
-        <div class="treatment-card reveal reveal-delay-3">
+        <div class="treatment-card reveal reveal-delay-3" data-treatment="proteses">
           <div class="treatment-card-image">
             <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop" alt="Próteses">
           </div>
           <div class="treatment-card-content">
             <h3>Próteses</h3>
             <p>Restauração completa da função estética com próteses fixas, removíveis e sobre implantes.</p>
-            <a href="#" class="treatment-card-btn">Saiba mais</a>
+            <button class="treatment-card-btn" onclick="openTreatmentModal('proteses')">Saiba mais</button>
           </div>
         </div>
         <!-- Endodontia -->
-        <div class="treatment-card reveal reveal-delay-4">
+        <div class="treatment-card reveal reveal-delay-4" data-treatment="endodontia">
           <div class="treatment-card-image">
             <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop" alt="Endodontia">
           </div>
           <div class="treatment-card-content">
             <h3>Endodontia</h3>
             <p>Tratamento de canal realizado com tecnologia microscópica para maior precisão.</p>
-            <a href="#" class="treatment-card-btn">Saiba mais</a>
+            <button class="treatment-card-btn" onclick="openTreatmentModal('endodontia')">Saiba mais</button>
           </div>
         </div>
         <!-- Odontopediatria -->
-        <div class="treatment-card reveal reveal-delay-5">
+        <div class="treatment-card reveal reveal-delay-5" data-treatment="odontopediatria">
           <div class="treatment-card-image">
             <img src="https://plus.unsplash.com/premium_photo-1661581023604-65573d65306c?q=80&w=800&auto=format&fit=crop" alt="Odontopediatria">
           </div>
           <div class="treatment-card-content">
             <h3>Odontopediatria</h3>
             <p>Cuidado especial e humanizado para a saúde bucal das crianças desde os primeiros anos.</p>
-            <a href="#" class="treatment-card-btn">Saiba mais</a>
+            <button class="treatment-card-btn" onclick="openTreatmentModal('odontopediatria')">Saiba mais</button>
           </div>
         </div>
       </div>
@@ -627,72 +629,6 @@
                 <h4 class="font-semibold text-brand-800 text-lg">Dra. Isadora Espínola</h4>
                 <span class="text-accent text-sm font-medium">CRO-SP 123759</span>
                 <p class="text-gray-600 mt-2 text-sm">Especialista em Endodontia pela FAOA - APCD/SP.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Doctor 7 -->
-          <div class="swiper-slide">
-            <div class="team-card">
-              <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/FotoUAI.jpg-scaled-e1777918339819-rmz2fxx8ocoadru4lmjv3hs581vwucwo1cxxi6g178.jpeg" alt="Dr. Hugo Antonizzi" class="w-full h-64 object-cover">
-              <div class="p-6">
-                <h4 class="font-semibold text-brand-800 text-lg">Dr. Hugo Antonizzi</h4>
-                <span class="text-accent text-sm font-medium">CRO-SP 123759</span>
-                <p class="text-gray-600 mt-2 text-sm">Especialista em Implantodontia e Cirurgia Oral Menor.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Doctor 8 -->
-          <div class="swiper-slide">
-            <div class="team-card">
-              <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/Foto-Dra-Danielle--scaled-e1777924251719-rmz6qaz30vzh0fm78cm8kjh9611wwxprxdsiq1kjdg.jpg" alt="Dra. Danielle" class="w-full h-64 object-cover">
-              <div class="p-6">
-                <h4 class="font-semibold text-brand-800 text-lg">Dra. Danielle</h4>
-                <span class="text-accent text-sm font-medium">CRO-SP 133872</span>
-                <p class="text-gray-600 mt-2 text-sm">Especialista em Ortodontia pelo SENAC. Laserterapia.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Doctor 9 -->
-          <div class="swiper-slide">
-            <div class="team-card">
-              <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-05-08-at-10.37.41-rn9hh2r1iqpjg0opgkdg7j2l6kijcph29rolf46gb8.jpeg" alt="Dra. Isabella Petroline" class="w-full h-64 object-cover">
-              <div class="p-6">
-                <h4 class="font-semibold text-brand-800 text-lg">Dra. Isabella Petroline</h4>
-                <span class="text-accent text-sm font-medium">CRO-SP 176745</span>
-                <p class="text-gray-600 mt-2 text-sm">Formada USP. Residência em Harmonização Orofacial.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Doctor 10 -->
-          <div class="swiper-slide">
-            <div class="team-card">
-              <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-05-04-at-18.22.01-rmzaqemcrj8ywcaus508boe7nksnygsdem9ac5wrh0.jpeg" alt="Dra. Natalia Lustosa" class="w-full h-64 object-cover">
-              <div class="p-6">
-                <h4 class="font-semibold text-brand-800 text-lg">Dra. Natalia Lustosa</h4>
-                <span class="text-accent text-sm font-medium">CRO-SP 172466</span>
-                <p class="text-gray-600 mt-2 text-sm">Formada UNESP. Atendimento adulto e pediátrico.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Doctor 11 -->
-          <div class="swiper-slide">
-            <div class="team-card">
-              <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/IMG_1255-e1777929334820-rmzaf0spzrnyacu597uw4jt8nkwmqflei9tl3isetw.jpg" alt="Dra. Carolain Godoy" class="w-full h-64 object-cover">
-              <div class="p-6">
-                <h4 class="font-semibold text-brand-800 text-lg">Dra. Carolain Godoy</h4>
-                <span class="text-accent text-sm font-medium">CRO-SP 169831</span>
-                <p class="text-gray-600 mt-2 text-sm">Técnica em Prótese Dentária. Formada Uninove.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Doctor 12 -->
-          <div class="swiper-slide">
-            <div class="team-card">
-              <img src="http://uaiodontologia.com.br/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-05-04-at-13.48.45-rmza0vc73kajhpe5w3n3l4deoqnouhevw88ezjrsic.jpeg" alt="Dra. Giullya Campos" class="w-full h-64 object-cover">
-              <div class="p-6">
-                <h4 class="font-semibold text-brand-800 text-lg">Dra. Giullya Campos</h4>
-                <span class="text-accent text-sm font-medium">CRO-SP 151658</span>
-                <p class="text-gray-600 mt-2 text-sm">Especialista em Ortodontia pela Universidade Italo Brasileiro.</p>
               </div>
             </div>
           </div>
@@ -778,63 +714,6 @@
               <p class="text-gray-600">"Levei meu filho de 5 anos para consulta com a Dra. Letícia e fiquei extremamente satisfeita com toda a experiência... Recomendo com toda certeza!"</p>
             </div>
           </div>
-          <!-- Review 4 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="flex items-center gap-4 mb-4">
-                <img src="https://lh3.googleusercontent.com/a/ACg8ocIcmbil-cJfKlyv_PBsK_Q_ZrgMlQ_BhH_PX_y3eQ7_eCqEhg=s64-c-rp-mo-br100" alt="Ivaneide Afre" class="w-12 h-12 rounded-full object-cover">
-                <div>
-                  <h4 class="font-semibold text-brand-800">Ivaneide Afre</h4>
-                  <div class="flex gap-1 text-yellow-400">
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                  </div>
-                </div>
-              </div>
-              <p class="text-gray-600">"Ótimo atendimento da Dra Natália e Dra Isadora, bom atendimento do Felipe e da Tainá"</p>
-            </div>
-          </div>
-          <!-- Review 5 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="flex items-center gap-4 mb-4">
-                <img src="https://lh3.googleusercontent.com/a/ACg8ocIcmbil-cJfKlyv_PBsK_Q_ZrgMlQ_BhH_PX_y3eQ7_eCqEhg=s64-c-rp-mo-br100" alt="Gabi Medeiros" class="w-12 h-12 rounded-full object-cover">
-                <div>
-                  <h4 class="font-semibold text-brand-800">Gabi Medeiros</h4>
-                  <div class="flex gap-1 text-yellow-400">
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                  </div>
-                </div>
-              </div>
-              <p class="text-gray-600">"Ótima clínica, fui muito bem recepcionada, ótimos atendimento, fiquei encantada com o atendimento do Felipe e da Taina🫶🏽"</p>
-            </div>
-          </div>
-          <!-- Review 6 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="flex items-center gap-4 mb-4">
-                <img src="https://lh3.googleusercontent.com/a/ACg8ocKVPDqcnz-byajuoLfoUhs5E7vLRxlKgAYkpM4JIB3WquU1gXA=s64-c-rp-mo-br100" alt="Kenia Ferreira" class="w-12 h-12 rounded-full object-cover">
-                <div>
-                  <h4 class="font-semibold text-brand-800">Kenia Ferreira</h4>
-                  <div class="flex gap-1 text-yellow-400">
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify" data-icon="mdi:star" data-width="16"></span>
-                    <span class="iconify text-gray-300" data-icon="mdi:star-outline" data-width="16"></span>
-                  </div>
-                </div>
-              </div>
-              <p class="text-gray-600">"Quero avaliar o Felipe e a Tainá na recepção. São educados, atenciosos e muito profissionais. Fui muito bem atendida."</p>
-            </div>
-          </div>
         </div>
         <div class="swiper-pagination mt-8"></div>
         <div class="swiper-nav swiper-prev swiper-nav-dark"><span class="iconify" data-icon="mdi:chevron-left" data-width="24"></span></div>
@@ -843,116 +722,85 @@
     </div>
   </section>
 
-  <!-- Contato Section - MODIFIED -->
-<section id="contato" class="py-20 md:py-28 bg-brand-800 relative overflow-hidden">
-  <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <span class="reveal text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3 block">Venha Nos Visitar</span>
-      <h2 class="reveal reveal-delay-1 text-3xl md:text-5xl font-bold text-white tracking-tight">Encontre a Unidade Mais Próxima</h2>
-    </div>
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      
-      <!-- Unidade Campos Sales - COM WIDGET INTEGRADO -->
-      <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-500">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
-          </div>
-          <div>
-            <h3 class="text-white font-semibold text-lg">Unidade Campos Sales</h3>
-            <p class="text-white/50 text-sm">R. Campos Sales, 42 - São Paulo, SP</p>
-          </div>
-        </div>
-        
-        <!-- Widget de Informações -->
-        <div class="location-info bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="iconify text-accent" data-icon="mdi:phone" data-width="20"></span>
-            <p class="text-white/80 text-sm">(11) 94274-2684</p>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="iconify text-accent" data-icon="mdi:clock-outline" data-width="20"></span>
-            <p class="text-white/80 text-sm">Seg-Sex: 8h-19h | Sáb: 8h-13h</p>
-          </div>
-        </div>
-        
-        <a href="https://wa.me/5511942742684?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20agendar%20na%20unidade%20Campos%20Sales." 
-           target="_blank" 
-           class="btn btn-accent w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 text-sm">
-          <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
-          Chamar no WhatsApp
-        </a>
-        
-        <div class="mt-4 rounded-xl overflow-hidden">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5841489173217!2d-46.87964570321044!3d-23.5114835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da1fa0ad07%3A0xc0acd177d4a3f310!2sOdontoclin!5e0!3m2!1spt-PT!2sbr!4v1773081355175!5m2!1spt-PT!2sbr" 
-                  width="100%" 
-                  height="200" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+  <!-- Contato Section -->
+  <section id="contato" class="py-20 md:py-28 bg-brand-800 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="reveal text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-3 block">Venha Nos Visitar</span>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-5xl font-bold text-white tracking-tight">Encontre a Unidade Mais Próxima</h2>
       </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-      <!-- Unidade Henriqueta Mendes Guerra - COM WIDGET INTEGRADO -->
-      <div class="reveal reveal-delay-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-500">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
+        <!-- Unidade Campos Sales -->
+        <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-500">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-lg">Unidade Campos Sales</h3>
+              <p class="text-white/50 text-sm">R. Campos Sales, 42 - São Paulo, SP</p>
+            </div>
           </div>
-          <div>
-            <h3 class="text-white font-semibold text-lg">Unidade Henriqueta</h3>
-            <p class="text-white/50 text-sm">Av. Henriqueta M. Guerra, 106 - São Paulo, SP</p>
+          <div class="location-info bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="iconify text-accent" data-icon="mdi:phone" data-width="20"></span>
+              <p class="text-white/80 text-sm">(11) 94274-2684</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="iconify text-accent" data-icon="mdi:clock-outline" data-width="20"></span>
+              <p class="text-white/80 text-sm">Seg-Sex: 8h-19h | Sáb: 8h-13h</p>
+            </div>
+          </div>
+          <a href="https://wa.me/5511942742684?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20agendar%20na%20unidade%20Campos%20Sales." target="_blank" class="btn btn-accent w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 text-sm">
+            <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
+            Chamar no WhatsApp
+          </a>
+          <div class="mt-4 rounded-xl overflow-hidden">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5841489173217!2d-46.87964570321044!3d-23.5114835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da1fa0ad07%3A0xc0acd177d4a3f310!2sOdontoclin!5e0!3m2!1spt-PT!2sbr!4v1773081355175!5m2!1spt-PT!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        
-        <!-- Widget de Informações -->
-        <div class="location-info bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="iconify text-accent" data-icon="mdi:phone" data-width="20"></span>
-            <p class="text-white/80 text-sm">(11) 95630-4120</p>
+
+        <!-- Unidade Henriqueta Mendes Guerra -->
+        <div class="reveal reveal-delay-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-500">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <span class="iconify text-accent" data-icon="mdi:map-marker" data-width="24"></span>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-lg">Unidade Henriqueta</h3>
+              <p class="text-white/50 text-sm">Av. Henriqueta M. Guerra, 106 - São Paulo, SP</p>
+            </div>
           </div>
-          <div class="flex items-center gap-3">
-            <span class="iconify text-accent" data-icon="mdi:clock-outline" data-width="20"></span>
-            <p class="text-white/80 text-sm">Seg-Sex: 8h-19h | Sáb: 8h-13h</p>
+          <div class="location-info bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="iconify text-accent" data-icon="mdi:phone" data-width="20"></span>
+              <p class="text-white/80 text-sm">(11) 95630-4120</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="iconify text-accent" data-icon="mdi:clock-outline" data-width="20"></span>
+              <p class="text-white/80 text-sm">Seg-Sex: 8h-19h | Sáb: 8h-13h</p>
+            </div>
           </div>
-        </div>
-        
-        <a href="https://wa.me/5511956304120?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20agendar%20na%20unidade%20Henriqueta." 
-           target="_blank" 
-           class="btn btn-accent w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 text-sm">
-          <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
-          Chamar no WhatsApp
-        </a>
-        
-        <div class="mt-4 rounded-xl overflow-hidden">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5968025351726!2d-46.876051!3d-23.511028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da34fcd56b%3A0xabc71879ee47e8!2sUAI%20Henriqueta!5e0!3m2!1spt-PT!2sbr!4v1773080064843!5m2!1spt-PT!2sbr" 
-                  width="100%" 
-                  height="200" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <a href="https://wa.me/5511956304120?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20agendar%20na%20unidade%20Henriqueta." target="_blank" class="btn btn-accent w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 text-sm">
+            <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
+            Chamar no WhatsApp
+          </a>
+          <div class="mt-4 rounded-xl overflow-hidden">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5968025351726!2d-46.876051!3d-23.511028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03da34fcd56b%3A0xabc71879ee47e8!2sUAI%20Henriqueta!5e0!3m2!1spt-PT!2sbr!4v1773080064843!5m2!1spt-PT!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
-      
+      <div class="reveal text-center mt-12">
+        <a href="https://wa.me/5511950602146?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços." target="_blank" class="inline-flex items-center gap-2 bg-accent hover:bg-brand-400 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 text-sm tracking-wide">
+          <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
     </div>
-    
-    <!-- Botão Centralizado de Agendamento -->
-    <div class="reveal text-center mt-12">
-      <a href="https://wa.me/5511950602146?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços." 
-         target="_blank" 
-         class="inline-flex items-center gap-2 bg-accent hover:bg-brand-400 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 text-sm tracking-wide">
-        <span class="iconify" data-icon="mdi:whatsapp" data-width="20"></span>
-        Agendar pelo WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-brand-900 pt-16 pb-8">
@@ -1006,6 +854,30 @@
      target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
     <span class="iconify" data-icon="mdi:whatsapp" data-width="28"></span>
   </a>
+
+  <!-- Modal HTML -->
+  <div class="modal-overlay" id="treatmentModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Tratamento</h3>
+        <button class="modal-close" onclick="closeModal()">
+          <span class="iconify" data-icon="mdi:close" data-width="24"></span>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content will be injected here -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Fechar</button>
+        <a href="https://wa.me/5511950602146?text=Olá%20Vim%20do%20site%20da%20Uai%20Odontologia%20e%20gostaria%20de%20saber%20mais%20sobre%20este%20tratamento."
+           target="_blank"
+           class="modal-btn modal-btn-primary">
+          <span class="iconify" data-icon="mdi:whatsapp" data-width="18"></span>
+          Agendar Consulta
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1094,6 +966,117 @@
         1024: { slidesPerView: 3, spaceBetween: 24 },
       },
     });
-  </script>
+
+    // Treatment information database
+    const treatmentInfo = {
+      implantes: {
+        title: 'Implantes Dentários',
+        content: `
+          <p>Os implantes dentários são a solução mais moderna e duradoura para substituir dentes perdidos. Consistem em um pino de titânio que é inserido cirurgicamente no osso da mandíbula ou maxila, funcionando como uma raiz artificial.</p>
+          <ul>
+            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Materiais de alta qualidade:</strong> Titânio biocompatível ou zircônia</li>
+            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Duração:</strong> Podem durar a vida toda com cuidados adequados</li>
+            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Recuperação:</strong> Processo de osseointegração de 3-6 meses</li>
+            <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Benefícios:</strong> Funcionalidade natural, preservação óssea, estética superior</li>
+          </ul>
+          <p>Ideal para quem perdeu um ou mais dentes e deseja recuperar a função mastigatória e a estética do sorriso.</p>
+        `
+      },
+      ortodontia: {
+      title: 'Ortodontia',
+      content: `
+        <p>A ortodontia corrige o alinhamento dos dentes e da mordida, melhorando não apenas a estética, mas também a saúde bucal e funcionalidade.</p>
+        <ul>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Aparelhos fixos:</strong> Metálicos, cerâmicos ou safira</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Alinhadores invisíveis:</strong> Opção estética e removível</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Duração do tratamento:</strong> 12 a 24 meses em média</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Benefícios:</strong> Melhor mastigação, higiene facilitada, sorriso harmonioso</li>
+        </ul>
+        <p>Atendemos crianças, adolescentes e adultos com técnicas modernas e confortáveis.</p>
+      `
+    },
+    harmonizacao: {
+      title: 'Harmonização Orofacial',
+      content: `
+        <p>A harmonização facial busca equilibrar e valorizar as características naturais do rosto, proporcionando um resultado estético natural e harmonioso.</p>
+        <ul>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Procedimentos:</strong> Preenchimento labial, botox, bioestimuladores</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Resultados:</strong> Naturalidade e equilíbrio facial</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Duração:</strong> Efeitos duram de 6 meses a 2 anos</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Recuperação:</strong> Mínima, retorno imediato às atividades</li>
+        </ul>
+        <p>Procedimentos realizados por especialistas qualificados com foco em resultados naturais.</p>
+      `
+    },
+    proteses: {
+      title: 'Próteses Dentárias',
+      content: `
+        <p>As próteses dentárias restauram dentes ausentes, devolvendo função mastigatória, fala adequada e estética natural.</p>
+        <ul>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Próteses fixas:</strong> Coroas e pontes sobre dentes ou implantes</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Próteses removíveis:</strong> Total ou parcial, com conforto máximo</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Materiais:</strong> Porcelana, resina, zircônia</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Personalização:</strong> Cor, formato e tamanho sob medida</li>
+        </ul>
+        <p>Tecnologia digital para prototipagem precisa e resultados previsíveis.</p>
+      `
+    },
+    endodontia: {
+      title: 'Endodontia (Tratamento de Canal)',
+      content: `
+        <p>O tratamento endodôntico salva dentes que teriam que ser extraídos, removendo a polpa infectada e preservando a estrutura dental.</p>
+        <ul>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Tecnologia:</strong> Microscopia para máxima precisão</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Sem dor:</strong> Anestesia local e técnicas modernas</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Sessões:</strong> 1 a 3 consultas conforme complexidade</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Sucesso:</strong> Taxa de sucesso acima de 95%</li>
+        </ul>
+        <p>Preservamos seu dente natural com técnicas minimamente invasivas.</p>
+      `
+    },
+    odontopediatria: {
+      title: 'Odontopediatria',
+      content: `
+        <p>Cuidado especializado para a saúde bucal infantil, com abordagem humanizada e adaptada para cada faixa etária.</p>
+        <ul>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Primeira consulta:</strong> Recomendada aos 6 meses ou primeiro dente</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Prevenção:</strong> Flúor, selantes e orientações de higiene</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Ambiente:</strong> Lúdico e acolhedor para reduzir ansiedade</li>
+          <li><span class="iconify text-accent" data-icon="mdi:check-circle" data-width="20"></span><strong>Educação:</strong> Ensinamos hábitos saudáveis para toda a vida</li>
+        </ul>
+        <p>Transformamos a experiência dental em algo positivo para as crianças.</p>
+      `
+    }
+  };
+
+  function openTreatmentModal(treatment) {
+    const info = treatmentInfo[treatment];
+    if (!info) return;
+    
+    document.getElementById('modalTitle').textContent = info.title;
+    document.getElementById('modalBody').innerHTML = info.content;
+    document.getElementById('treatmentModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('treatmentModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('treatmentModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+
+  // Close modal with ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+</script>
 </body>
 </html>
