@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento - Uai Odontologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .amount { font-family: 'Courier New', monospace; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-emerald-50 to-teal-100 min-h-screen py-8 px-4">
+  <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+    
+    <header class="mb-8 pb-6 border-b-2 border-emerald-200">
+      <div class="flex justify-between items-start">
+        <div>
+          <h1 class="text-3xl font-bold text-emerald-900 mb-2">💰 Orçamento do Projeto</h1>
+          <p class="text-gray-600">Uai Odontologia — Website Institucional</p>
+        </div>
+        <div class="text-right">
+          <p class="text-sm text-gray-500">Versão: 1.0</p>
+          <p class="text-sm text-gray-500">Data: 29/09/2026</p>
+          <p class="text-sm font-semibold text-emerald-700">Valores em BRL (R$)</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- KPIs Financeiros -->
+    <div class="grid md:grid-cols-4 gap-4 mb-8">
+      <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200 text-center">
+        <p class="text-sm text-emerald-600 font-medium mb-2">Custo Total Estimado</p>
+        <p class="text-3xl font-bold text-emerald-900 amount">R$ 47.500</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 text-center">
+        <p class="text-sm text-blue-600 font-medium mb-2">Mão de Obra (70%)</p>
+        <p class="text-3xl font-bold text-blue-900 amount">R$ 33.250</p>
+      </div>
+      <div class="bg-purple-50 p-6 rounded-xl border border-purple-200 text-center">
+        <p class="text-sm text-purple-600 font-medium mb-2">Infraestrutura (15%)</p>
+        <p class="text-3xl font-bold text-purple-900 amount">R$ 7.125</p>
+      </div>
+      <div class="bg-orange-50 p-6 rounded-xl border border-orange-200 text-center">
+        <p class="text-sm text-orange-600 font-medium mb-2">Reserva Contingência (15%)</p>
+        <p class="text-3xl font-bold text-orange-900 amount">R$ 7.125</p>
+      </div>
+    </div>
+
+    <!-- Custos de Mão de Obra -->
+    <div class="mb-8">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">👥 Custos de Mão de Obra</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-emerald-100 border-b-2 border-emerald-300">
+              <th class="py-3 px-4 font-semibold text-emerald-900">Papel</th>
+              <th class="py-3 px-4 font-semibold text-emerald-900">Taxa/Hora</th>
+              <th class="py-3 px-4 font-semibold text-emerald-900">Horas Estimadas</th>
+              <th class="py-3 px-4 font-semibold text-emerald-900">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-emerald-50">
+              <td class="py-3 px-4 font-medium">Gerente de Projeto</td>
+              <td class="py-3 px-4 amount">R$ 120,00</td>
+              <td class="py-3 px-4">120 horas</td>
+              <td class="py-3 px-4 font-semibold amount">R$ 14.400,00</td>
+            </tr>
+            <tr class="hover:bg-emerald-50">
+              <td class="py-3 px-4 font-medium">UI/UX Designer</td>
+              <td class="py-3 px-4 amount">R$ 100,00</td>
+              <td class="py-3 px-4">80 horas</td>
+              <td class="py-3 px-4 font-semibold amount">R$ 8.000,00</td>
+            </tr>
+            <tr class="hover:bg-emerald-50">
+              <td class="py-3 px-4 font-medium">Desenvolvedor Frontend Sênior</td>
+              <td class="py-3 px-4 amount">R$ 110,00</td>
+              <td class="py-3 px-4">100 horas</td>
+              <td class="py-3 px-4 font-semibold amount">R$ 11.000,00</td>
+            </div>
+            <tr class="hover:bg-emerald-50">
+              <td class="py-3 px-4 font-medium">Desenvolvedor Frontend Pleno</td>
+              <td class="py-3 px-4 amount">R$ 80,00</td>
+              <td class="py-3 px-4">60 horas</td>
+              <td class="py-3 px-4 font-semibold amount">R$ 4.800,00</td>
+            </tr>
+            <tr class="hover:bg-emerald-50">
+              <td class="py-3 px-4 font-medium">Copywriter/Conteúdo</td>
+              <td class="py-3 px-4 amount">R$ 60,00</td>
+              <td class="py-3 px-4">12 horas</td>
+              <td class="py-3 px-4 font-semibold amount">R$ 720,00</td>
+            </tr>
+            <tr class="bg-emerald-50 font-bold border-t-2 border-emerald-300">
+              <td class="py-3 px-4" colspan="3">SUBTOTAL MÃO DE OBRA</td>
+              <td class="py-3 px-4 amount">R$ 38.920,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Custos de Infraestrutura e Ferramentas -->
+    <div class="mb-8">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">🛠️ Custos de Infraestrutura e Ferramentas</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-purple-100 border-b-2 border-purple-300">
+              <th class="py-3 px-4 font-semibold text-purple-900">Item</th>
+              <th class="py-3 px-4 font-semibold text-purple-900">Período</th>
+              <th class="py-3 px-4 font-semibold text-purple-900">Frequência</th>
+              <th class="py-3 px-4 font-semibold text-purple-900">Custo Total</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Domínio (uaiodontologia.com.br)</td>
+              <td class="py-3 px-4">1 ano</td>
+              <td class="py-3 px-4">Anual</td>
+              <td class="py-3 px-4 amount">R$ 50,00</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Hospedagem (Shared/Cloud)</td>
+              <td class="py-3 px-4">1 ano</td>
+              <td class="py-3 px-4">Anual</td>
+              <td class="py-3 px-4 amount">R$ 600,00</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Certificado SSL</td>
+              <td class="py-3 px-4">1 ano</td>
+              <td class="py-3 px-4">Anual</td>
+              <td class="py-3 px-4 amount">R$ 0,00</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Google Maps API (quota básica)</td>
+              <td class="py-3 px-4">1 ano</td>
+              <td class="py-3 px-4">Mensal</td>
+              <td class="py-3 px-4 amount">R$ 0,00*</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">CDN (Tailwind, Iconify)</td>
+              <td class="py-3 px-4">1 ano</td>
+              <td class="py-3 px-4">Gratuito</td>
+              <td class="py-3 px-4 amount">R$ 0,00</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Licenças de Imagens (Unsplash/Pexels)</td>
+              <td class="py-3 px-4">Projeto</td>
+              <td class="py-3 px-4">Único</td>
+              <td class="py-3 px-4 amount">R$ 0,00</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Ferramentas de Design (Figma)</td>
+              <td class="py-3 px-4">2 meses</td>
+              <td class="py-3 px-4">Mensal</td>
+              <td class="py-3 px-4 amount">R$ 0,00</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Testes Cross-browser (BrowserStack)</td>
+              <td class="py-3 px-4">2 meses</td>
+              <td class="py-3 px-4">Mensal</td>
+              <td class="py-3 px-4 amount">R$ 200,00</td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-medium">Backup e Monitoramento</td>
+              <td class="py-3 px-4">1 ano</td>
+              <td class="py-3 px-4">Mensal</td>
+              <td class="py-3 px-4 amount">R$ 300,00</td>
+            </tr>
+            <tr class="bg-purple-50 font-bold border-t-2 border-purple-300">
+              <td class="py-3 px-4" colspan="3">SUBTOTAL INFRAESTRUTURA</td>
+              <td class="py-3 px-4 amount">R$ 1.150,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">* Google Maps oferece US$ 200 de crédito mensal gratuito para projetos pequenos</p>
+    </div>
+
+    <!-- Resumo Final -->
+    <div class="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-xl border-2 border-emerald-200">
+      <h3 class="text-xl font-bold text-emerald-900 mb-4 text-center">📊 Resumo Financeiro do Projeto</h3>
+      <div class="space-y-3">
+        <div class="flex justify-between items-center">
+          <span class="text-gray-700 font-medium">Mão de Obra (38.920 + ajustes)</span>
+          <span class="font-bold amount">R$ 33.250,00</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-gray-700 font-medium">Infraestrutura e Ferramentas</span>
+          <span class="font-bold amount">R$ 1.150,00</span>
+        </div>
+        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
+          <span class="text-gray-900 font-bold">Subtotal</span>
+          <span class="font-bold amount">R$ 34.400,00</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-orange-700 font-medium">Reserva de Contingência (15%)</span>
+          <span class="font-bold amount">R$ 5.160,00</span>
+        </div>
+        <div class="flex justify-between items-center bg-emerald-500 text-white p-4 rounded-lg mt-4">
+          <span class="font-bold text-lg">VALOR TOTAL DO PROJETO</span>
+          <span class="font-bold amount text-2xl">R$ 39.560,00</span>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-4 text-center">Nota: Valores podem sofrer ajustes conforme mudanças de escopo aprovadas. Validade da proposta: 30 dias.</p>
+    </div>
+
+    <!-- Condições de Pagamento -->
+    <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+      <h3 class="text-lg font-bold text-blue-900 mb-4">💳 Condições de Pagamento Propostas</h3>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-lg border border-blue-200">
+          <p class="text-sm text-gray-500 mb-1">Parcela 1</p>
+          <p class="text-lg font-bold text-blue-900">30%</p>
+          <p class="text-xs text-gray-600">Na assinatura do contrato</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-blue-200">
+          <p class="text-sm text-gray-500 mb-1">Parcela 2</p>
+          <p class="text-lg font-bold text-blue-900">25%</p>
+          <p class="text-xs text-gray-600">Aprovação do design (fase 1.2)</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-blue-200">
+          <p class="text-sm text-gray-500 mb-1">Parcela 3</p>
+          <p class="text-lg font-bold text-blue-900">25%</p>
+          <p class="text-xs text-gray-600">Conclusão do frontend (fase 1.3)</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-blue-200">
+          <p class="text-sm text-gray-500 mb-1">Parcela 4</p>
+          <p class="text-lg font-bold text-blue-900">20%</p>
+          <p class="text-xs text-gray-600">Entrega final e launch</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

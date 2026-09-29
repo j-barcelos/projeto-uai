@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requisitos - Uai Odontologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-teal-50 to-emerald-100 min-h-screen py-8 px-4">
+  <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+    
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-teal-900 mb-2">📋 Matriz de Requisitos Funcionais e Não-Funcionais</h1>
+      <p class="text-gray-600">Uai Odontologia — Website Institucional</p>
+    </header>
+
+    <!-- Legend -->
+    <div class="mb-6 flex gap-4 flex-wrap">
+      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Funcional</span>
+      <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Não-Funcional</span>
+      <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Prioridade Alta</span>
+      <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Prioridade Média</span>
+      <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Prioridade Baixa</span>
+    </div>
+
+    <!-- Functional Requirements -->
+    <div class="mb-8">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">🔧 Requisitos Funcionais</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-teal-100 border-b-2 border-teal-300">
+              <th class="py-3 px-4 font-semibold text-teal-900 w-16">ID</th>
+              <th class="py-3 px-4 font-semibold text-teal-900">Descrição</th>
+              <th class="py-3 px-4 font-semibold text-teal-900 w-32">Categoria</th>
+              <th class="py-3 px-4 font-semibold text-teal-900 w-24">Prioridade</th>
+              <th class="py-3 px-4 font-semibold text-teal-900 w-24">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-001</td>
+              <td class="py-3 px-4">Sistema de navegação com menu fixo e mobile hamburger menu</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-002</td>
+              <td class="py-3 px-4">Exibição de 6 tratamentos com cards interativos e modais informativos</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-003</td>
+              <td class="py-3 px-4">Slider/carousel para equipe com Swiper.js (autplay, navigation, pagination)</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-004</td>
+              <td class="py-3 px-4">Integração com WhatsApp Business API para agendamentos</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-005</td>
+              <td class="py-3 px-4">Embed de reviews do Google com TrustIndex/Swiper</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Média</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-006</td>
+              <td class="py-3 px-4">Mapas Google Embed para 2 unidades com localização</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-007</td>
+              <td class="py-3 px-4">Botão flutuante de WhatsApp sempre visível</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Média</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+            <tr class="hover:bg-teal-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RF-008</td>
+              <td class="py-3 px-4">Animações scroll reveal para elementos ao entrar na viewport</td>
+              <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Funcional</span></td>
+              <td class="py-3 px-4"><span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">Baixa</span></td>
+              <td class="py-3 px-4 text-sm text-gray-600">Especificado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Non-Functional Requirements -->
+    <div class="mb-8">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">⚙️ Requisitos Não-Funcionais</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-purple-100 border-b-2 border-purple-300">
+              <th class="py-3 px-4 font-semibold text-purple-900 w-16">ID</th>
+              <th class="py-3 px-4 font-semibold text-purple-900">Descrição</th>
+              <th class="py-3 px-4 font-semibold text-purple-900 w-32">Categoria</th>
+              <th class="py-3 px-4 font-semibold text-purple-900 w-24">Prioridade</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-001</td>
+              <td class="py-3 px-4">Site deve carregar completamente em ≤3 segundos em conexão 4G</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Performance</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-002</td>
+              <td class="py-3 px-4">Compatibilidade com navegadores lançados nos últimos 2 anos</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Compatibilidade</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-003</td>
+              <td class="py-3 px-4">Responsividade para telas de 320px até 1920px de largura</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Responsividade</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-004</td>
+              <td class="py-3 px-4">Acessibilidade conforme WCAG 2.1 nível AA</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Acessibilidade</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-005</td>
+              <td class="py-3 px-4">SSL/TLS configurado (HTTPS obrigatório)</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Segurança</span></td>
+              <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Alta</span></td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-006</td>
+              <td class="py-3 px-4">Código semanticamente correto (HTML5, ARIA quando necessário)</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Qualidade de Código</span></td>
+              <td class="py-3 px-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Média</span></td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-007</td>
+              <td class="py-3 px-4">Imagens otimizadas (WebP com fallback JPEG/PNG)</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Performance</span></td>
+              <td class="py-3 px-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Média</span></td>
+            </tr>
+            <tr class="hover:bg-purple-50">
+              <td class="py-3 px-4 font-mono text-sm text-gray-600">RNF-008</td>
+              <td class="py-3 px-4">Disponibilidade mínima de 99% (uptime)</td>
+              <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Confiabilidade</span></td>
+              <td class="py-3 px-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Média</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
