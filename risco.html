@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riscos - Uai Odontologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-red-50 to-orange-100 min-h-screen py-8 px-4">
+  <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+    
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-red-900 mb-2">⚠️ Plano de Gerenciamento de Riscos</h1>
+      <p class="text-gray-600">Identificação, análise e mitigação de riscos do projeto</p>
+    </header>
+
+    <!-- Risk Register -->
+    <div class="space-y-4">
+      
+      <div class="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-bold text-red-900 text-lg">R01 - Atraso na entrega de conteúdo pelo cliente</h3>
+            <p class="text-sm text-gray-600 mt-2">Cliente não fornece fotos, textos ou aprovações nos prazos estabelecidos.</p>
+          </div>
+          <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">ALTO</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <div><strong class="text-red-900">Probabilidade:</strong> <span class="text-gray-700">60%</span></div>
+          <div><strong class="text-red-900">Impacto:</strong> <span class="text-gray-700">Crítico</span></div>
+          <div><strong class="text-red-900">Mitigação:</strong> <span class="text-gray-700">Definir deadlines claros no contrato; manter follow-up semanal; ter conteúdo placeholder preparado</span></div>
+        </div>
+      </div>
+
+      <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-400">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-bold text-orange-900 text-lg">R02 - Mudanças de escopo durante o desenvolvimento</h3>
+            <p class="text-sm text-gray-600 mt-2">Novas funcionalidades ou alterações solicitadas após início do desenvolvimento.</p>
+          </div>
+          <span class="bg-orange-400 text-white px-3 py-1 rounded-full text-sm font-bold">MÉDIO</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <div><strong class="text-orange-900">Probabilidade:</strong> <span class="text-gray-700">50%</span></div>
+          <div><strong class="text-orange-900">Impacto:</strong> <span class="text-gray-700">Moderado</span></div>
+          <div><strong class="text-orange-900">Mitigação:</strong> <span class="text-gray-700">Processo formal de change request; reserva de buffer de 15% no cronograma; sinalização de impacto no prazo/orçamento</span></div>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-bold text-yellow-900 text-lg">R03 - Problemas de compatibilidade cross-browser</h3>
+            <p class="text-sm text-gray-600 mt-2">Funcionalidades não funcionam consistentemente em todos os navegadores/dispositivos.</p>
+          </div>
+          <span class="bg-yellow-400 text-white px-3 py-1 rounded-full text-sm font-bold">MÉDIO</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <div><strong class="text-yellow-900">Probabilidade:</strong> <span class="text-gray-700">30%</span></div>
+          <div><strong class="text-yellow-900">Impacto:</strong> <span class="text-gray-700">Moderado</span></div>
+          <div><strong class="text-yellow-900">Mitigação:</strong> <span class="text-gray-700">Testes rigorosos em Chrome, Firefox, Safari, Edge; polyfills para funcionalidades modernas; fallback para browsers antigos</span></div>
+        </div>
+      </div>
+
+      <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-400">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-bold text-green-900 text-lg">R04 - Falha nas integrações de API externa</h3>
+            <p class="text-sm text-gray-600 mt-2">Google Maps, WhatsApp ou TrustIndex podem ter limitações ou mudanças de API.</p>
+          </div>
+          <span class="bg-green-400 text-white px-3 py-1 rounded-full text-sm font-bold">BAIXO</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <div><strong class="text-green-900">Probabilidade:</strong> <span class="text-gray-700">20%</span></div>
+          <div><strong class="text-green-900">Impacto:</strong> <span class="text-gray-700">Moderado</span></div>
+          <div><strong class="text-green-900">Mitigação:</strong> <span class="text-gray-700">Verificar terms of service; planejar alternativas (mapas estáticos, links diretos); monitorar changelogs das APIs</span></div>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-400">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-bold text-blue-900 text-lg">R05 - Performance insatisfatória (Core Web Vitals)</h3>
+            <p class="text-sm text-gray-600 mt-2">Site não atinge métricas desejadas de carregamento e interatividade.</p>
+          </div>
+          <span class="bg-blue-400 text-white px-3 py-1 rounded-full text-sm font-bold">BAIXO</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <div><strong class="text-blue-900">Probabilidade:</strong> <span class="text-gray-700">25%</span></div>
+          <div><strong class="text-blue-900">Impacto:</strong> <span class="text-gray-700">Moderado</span></div>
+          <div><strong class="text-blue-900">Mitigação:</strong> <span class="text-gray-700">Otimização de imagens (WebP, lazy loading); CDN para assets críticos; code splitting; minimização de CSS/JS</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Risk Scoring Legend -->
+    <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+      <h4 class="font-bold text-gray-900 mb-2">Legenda de Classificação:</h4>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div><span class="inline-block w-3 h-3 bg-red-500 rounded mr-2"></span><strong>ALTO:</strong> >70 probabilidade × impacto crítico</div>
+        <div><span class="inline-block w-3 h-3 bg-orange-400 rounded mr-2"></span><strong>MÉDIO:</strong> 40-70 probabilidade × impacto moderado</div>
+        <div><span class="inline-block w-3 h-3 bg-yellow-400 rounded mr-2"></span><strong>MODERADO:</strong> Impacto menor, requer atenção</div>
+        <div><span class="inline-block w-3 h-3 bg-green-400 rounded mr-2"></span><strong>BAIXO:</strong> Baixa probabilidade e impacto</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

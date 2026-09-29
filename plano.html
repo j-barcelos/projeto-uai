@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunicação - Uai Odontologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-cyan-100 min-h-screen py-8 px-4">
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+    
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-blue-900 mb-2">📢 Plano de Gerenciamento de Comunicações</h1>
+      <p class="text-gray-600">Canais, frequências e stakeholders do projeto</p>
+    </header>
+
+    <!-- Stakeholders -->
+    <div class="mb-8">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">Stakeholders Principais</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-bold text-blue-900">Uai Odontologia (Cliente)</p>
+          <p class="text-sm text-gray-600">Tomador de decisões, aprovador de entregas</p>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+          <p class="font-bold text-green-900">Equipe de Desenvolvimento</p>
+          <p class="text-sm text-gray-600">Executores do projeto (PM, Design, Dev)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Communication Matrix -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b-2 border-blue-300">
+            <th class="py-3 px-4 font-semibold text-blue-900">Tipo</th>
+            <th class="py-3 px-4 font-semibold text-blue-900">Canal</th>
+            <th class="py-3 px-4 font-semibold text-blue-900">Frequência</th>
+            <th class="py-3 px-4 font-semibold text-blue-900">Participantes</th>
+            <th class="py-3 px-4 font-semibold text-blue-900">Objetivo</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr class="hover:bg-blue-50">
+            <td class="py-3 px-4"><span class="bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold">Reunião</span></td>
+            <td class="py-3 px-4">Zoom/Google Meet</td>
+            <td class="py-3 px-4">Semanal (Terças)</td>
+            <td class="py-3 px-4">PM + Cliente + Equipe</td>
+            <td class="py-3 px-4">Revisão de progresso, alinhamento de expectativas</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="py-3 px-4"><span class="bg-purple-600 text-white px-2 py-1 rounded text-xs font-bold">Status</span></td>
+            <td class="py-3 px-4">Email</td>
+            <td class="py-3 px-4">Semanal (Sexta)</td>
+            <td class="py-3 px-4">PM → Cliente</td>
+            <td class="py-3 px-4">Relatório de andamento, próximos passos, bloqueios</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="py-3 px-4"><span class="bg-green-600 text-white px-2 py-1 rounded text-xs font-bold">Diário</span></td>
+            <td class="py-3 px-4">Slack/WhatsApp</td>
+            <td class="py-3 px-4">Diário</td>
+            <td class="py-3 px-4">Equipe interna</td>
+            <td class="py-3 px-4">Coordenacao técnica, resolução rápida de dúvidas</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="py-3 px-4"><span class="bg-yellow-600 text-white px-2 py-1 rounded text-xs font-bold">Documento</span></td>
+            <td class="py-3 px-4">Google Drive/Notion</td>
+            <td class="py-3 px-4">Atualizações contínuas</td>
+            <td class="py-3 px-4">Todos</td>
+            <td class="py-3 px-4">Centralização de documentos, requisitos, especificações</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="py-3 px-4"><span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">Hito</span></td>
+            <td class="py-3 px-4">Meeting Formal</td>
+            <td class="py-3 px-4">Ao completar fases</td>
+            <td class="py-3 px-4">PM + Cliente + Equipe</td>
+            <td class="py-3 px-4">Aprovação de entregáveis, decisão de avanço para próxima fase</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="py-3 px-4"><span class="bg-teal-600 text-white px-2 py-1 rounded text-xs font-bold">Emergencial</span></td>
+            <td class="py-3 px-4">Telefone</td>
+            <td class="py-3 px-4">Conforme necessidade</td>
+            <td class="py-3 px-4">PM ↔ Cliente</td>
+            <td class="py-3 px-4">Questões urgentes que não podem esperar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Escalation Path -->
+    <div class="mt-8 p-6 bg-gray-50 rounded-xl">
+      <h3 class="text-lg font-bold text-gray-900 mb-4">🔺 Caminho de Escalação</h3>
+      <ol class="space-y-3">
+        <li class="flex items-center gap-3"><span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full text-sm font-bold">Nível 1</span> <span class="text-gray-700">Técnico → Gerente de Projeto</span></li>
+        <li class="flex items-center gap-3"><span class="bg-gray-400 text-gray-800 px-3 py-1 rounded-full text-sm font-bold">Nível 2</span> <span class="text-gray-700">PM → Líder do Cliente</span></li>
+        <li class="flex items-center gap-3"><span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Nível 3</span> <span class="text-gray-700">Diretor Empresa → Diretor Cliente (decisão executiva)</span></li>
+      </ol>
+    </div>
+
+  </div>
+</body>
+</html>

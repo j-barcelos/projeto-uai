@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos - Uai Odontologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-100 min-h-screen py-8 px-4">
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+    
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-indigo-900 mb-2">👥 Plano de Recursos Humanos</h1>
+      <p class="text-gray-600">Matriz de Responsabilidades (RAM/RACI)</p>
+    </header>
+
+    <!-- Team Structure -->
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500">
+        <h3 class="font-bold text-indigo-900 text-lg mb-2">Gerente de Projeto</h3>
+        <p class="text-sm text-gray-600">Coordenação geral, comunicação com cliente, controle de prazos e entregáveis.</p>
+        <p class="text-xs text-indigo-600 mt-3">1 pessoa • Tempo integral</p>
+      </div>
+      
+      <div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
+        <h3 class="font-bold text-purple-900 text-lg mb-2">UI/UX Designer</h3>
+        <p class="text-sm text-gray-600">Wireframes, protótipos, design system, validação de usabilidade.</p>
+        <p class="text-xs text-purple-600 mt-3">1 pessoa • 50% dedicação</p>
+      </div>
+      
+      <div class="bg-pink-50 p-6 rounded-xl border-l-4 border-pink-500">
+        <h3 class="font-bold text-pink-900 text-lg mb-2">Desenvolvedor Frontend</h3>
+        <p class="text-sm text-gray-600">Implementação HTML/CSS/JS, integração de APIs, testes e deploy.</p>
+        <p class="text-xs text-pink-600 mt-3">1-2 pessoas • 75% dedicação</p>
+      </div>
+    </div>
+
+    <!-- RACI Matrix -->
+    <div class="overflow-x-auto">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">Matriz RACI</h3>
+      <p class="text-sm text-gray-600 mb-4">R = Responsible | A = Accountable | C = Consulted | I = Informed</p>
+      
+      <table class="w-full text-left text-sm">
+        <thead>
+          <tr class="border-b-2 border-gray-300">
+            <th class="py-3 px-3 font-semibold">Entregável</th>
+            <th class="py-3 px-3 font-semibold text-center">PM</th>
+            <th class="py-3 px-3 font-semibold text-center">Designer</th>
+            <th class="py-3 px-3 font-semibold text-center">Dev Frontend</th>
+            <th class="py-3 px-3 font-semibold text-center">Cliente</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="py-3 px-3">Planejamento (1.1)</td><td class="py-3 px-3 text-center font-bold bg-blue-100">A</td><td class="py-3 px-3 text-center">C</td><td class="py-3 px-3 text-center">I</td><td class="py-3 px-3 text-center">C</td></tr>
+          <tr><td class="py-3 px-3">Design/UI (1.2)</td><td class="py-3 px-3 text-center">C</td><td class="py-3 px-3 text-center font-bold bg-blue-100">R/A</td><td class="py-3 px-3 text-center">I</td><td class="py-3 px-3 text-center">C</td></tr>
+          <tr><td class="py-3 px-3">Conteúdo (1.7)</td><td class="py-3 px-3 text-center">A</td><td class="py-3 px-3 text-center">I</td><td class="py-3 px-3 text-center">C</td><td class="py-3 px-3 text-center font-bold bg-blue-100">R</td></tr>
+          <tr><td class="py-3 px-3">Frontend (1.3)</td><td class="py-3 px-3 text-center">I</td><td class="py-3 px-3 text-center">C</td><td class="py-3 px-3 text-center font-bold bg-blue-100">R/A</td><td class="py-3 px-3 text-center">I</td></tr>
+          <tr><td class="py-3 px-3">Integrações (1.4)</td><td class="py-3 px-3 text-center">I</td><td class="py-3 px-3 text-center">I</td><td class="py-3 px-3 text-center font-bold bg-blue-100">R/A</td><td class="py-3 px-3 text-center">I</td></tr>
+          <tr><td class="py-3 px-3">Testes (1.5)</td><td class="py-3 px-3 text-center">A</td><td class="py-3 px-3 text-center">R</td><td class="py-3 px-3 text-center">R</td><td class="py-3 px-3 text-center">C</td></tr>
+          <tr><td class="py-3 px-3">Deploy (1.6)</td><td class="py-3 px-3 text-center font-bold bg-blue-100">A</td><td class="py-3 px-3 text-center">I</td><td class="py-3 px-3 text-center">R</td><td class="py-3 px-3 text-center">C</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
