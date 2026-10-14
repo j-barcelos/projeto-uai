@@ -1,0 +1,4 @@
+Adicionar lista de abreviaturas e siglas
+Adicionar tabela a iso 25010
+Corrigir o cronograma
+Citar tecnologias especificas utilizadas no orçamento
